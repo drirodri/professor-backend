@@ -43,13 +43,13 @@ export class SeedService {
       {
         name: 'Charles Henrique',
         id: 'STU001',
-        status: 'APROVADO',
+        status: 'NAO_AVALIADO',
         classCodeList: ['TURMA001', 'TURMA002'],
       },
       {
         name: 'Jimi Hendrix da Silva',
         id: 'STU002',
-        status: 'Ativo',
+        status: 'NAO_AVALIADO',
         classCodeList: ['TURMA001', 'TURMA003'],
       },
     ];

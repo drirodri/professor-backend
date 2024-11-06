@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  component-api:
+    image: professor-backend:fargate
+    restart: always
+    environment:
+      TZ: 'Brazil/East'
+      CONTEXT: professores
+      APP: estagio
+      SERVICE: professor-backend
+      ENVIRONMENT: ci
+    ports:
+      - '8080:8080'
+    depends_on:
+      - component-mongo
+
+  component-mongo:
+    image: mongo:7
+    environment:
+      MONGO_INITDB_DATABASE: academico-svc
+    ports:
+      - '27017:27017'

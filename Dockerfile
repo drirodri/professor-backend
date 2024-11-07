@@ -8,7 +8,7 @@ RUN npm i -g npm@10 && apk update && apk upgrade --available && apk add --update
 WORKDIR $APP_HOME
 
 COPY ["package.json", "package-lock.json", "./"]
-RUN npm ci  
+RUN npm i  
 
 COPY ["tsconfig.json", "./"]
 COPY ["tsconfig.build.json", "./"]

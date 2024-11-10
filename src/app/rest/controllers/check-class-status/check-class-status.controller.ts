@@ -8,9 +8,10 @@ export class CheckClassStatusController {
   @Get('/class/:id/status')
   @HttpCode(HttpStatus.OK)
   @Header('access-control-allow-origin', '*')
-  execute(@Param('id') classId: string): Promise<string> {
+  async execute(@Param('id') classId: string): Promise<string> {
     const usecase = this.usecaseFactory.getInstance();
+    const status = await usecase.execute({ classId });
 
-    return usecase.execute({ classId });
+    return status;
   }
 }

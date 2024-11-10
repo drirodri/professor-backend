@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Model } from 'mongoose';
 import {
   ListStudentsFromClassByIdPort,
@@ -18,7 +19,6 @@ export class ListStudentsFromClassByIdMongooseAdapter implements ListStudentsFro
   }
 
   private mapStudentsToModel(studentDocumentList: StudentDocument[]): ListStudentsFromClassByIdPortResult {
-    console.log('studentDocumentList', studentDocumentList);
-    return [];
+    return studentDocumentList; // changed [] to studentDocumentList
   }
 }

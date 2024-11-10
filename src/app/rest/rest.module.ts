@@ -3,12 +3,14 @@ import { ListProfessorClassesByFilterController } from './controllers/list-profe
 import { InfraModule } from '../../infra/infra.module';
 import { ListStudentsFromClassByIdController } from './controllers/list-students-from-class-by-id/list-students-from-class-by-id.controller';
 import { CheckClassStatusController } from './controllers/check-class-status/check-class-status.controller';
+import { StudentsController } from './controllers/add-student-grades/add-student-grades.controller';
 
 @Module({
   controllers: [
     ListProfessorClassesByFilterController,
     ListStudentsFromClassByIdController,
     CheckClassStatusController,
+    StudentsController,
   ],
   imports: [InfraModule],
 })
